@@ -16,7 +16,9 @@ function computer()
 
 function startIntervalComputer()
 {
-	timeoutComputer = setInterval(computer, 100);
+	if (chance)//이미 기회가 있다면
+		return;//퇴짜
+	timeoutComputer = setInterval(computer, 200);
 }
 
 function user(input)
