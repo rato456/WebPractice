@@ -9,7 +9,6 @@ var consecutive_victory = 0;
 
 function computer()
 {
-	chance = true;
 	computer_rps = Math.round(Math.random() * 100) % 3;
 	document.getElementById("computer").innerHTML = rps[computer_rps];
 }
@@ -18,6 +17,7 @@ function startIntervalComputer()
 {
 	if (chance)//이미 기회가 있다면
 		return;//퇴짜
+	chance = true;//아무리 시작 버튼 빨리 눌려도 퇴짜당하도록
 	timeoutComputer = setInterval(computer, 200);
 }
 
